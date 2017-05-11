@@ -9,9 +9,11 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 
+    <!--How to do forms using HTMLHelper in ASP.NET-->
     @using (Html.BeginForm())
     {
     <p>
+        Genre: @Html.DropDownList("movieGenre", "All")
         Title: @Html.TextBox("SearchString") <br />
         <input type="submit" value="Filter" />
     </p>
